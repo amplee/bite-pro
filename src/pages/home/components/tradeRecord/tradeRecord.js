@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {actionCreators} from '../../store';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { actionCreators } from '../../store';
+import { Table } from 'antd';
+import { TRADE_RECORD_COLUMNS } from '../../store/constants';
 
 class TradeRecord extends Component {
 
@@ -9,10 +11,15 @@ class TradeRecord extends Component {
     }
 
     render() {
-        console.log('this.props.recordData',this.props.recordData)
+        const { recordData } = this.props;
         return (
             <div>
-                交易记录
+                <Table 
+                bordered
+                rowKey={record => record.id}
+                columns={TRADE_RECORD_COLUMNS}
+                dataSource={recordData.length > 0 ? recordData[0].recordDataModelList : []}
+                />
             </div>
         );
     }
@@ -21,9 +28,8 @@ class TradeRecord extends Component {
 
 
 const mapStateToProps = (state) => {
-    console.log('getIn',state, state.getIn(['trade', 'recordData']));
     return {
-        recordData: state.getIn(['trade', 'recordData']),
+        recordData: state.getIn(['tradeRecord', 'recordData']),
     }
 }
 
@@ -36,5 +42,5 @@ const mapDispathToProps = (dispatch) => {
 
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(TradeRecord);
+export default connect(mapStateToProps, mapDispathToProps)(tradeRecord);
 

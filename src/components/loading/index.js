@@ -19,7 +19,6 @@ class GlobalLoading extends Component {
 const mapStateToProps = (state) => {
     return {
         loading: state.getIn(['global', 'loading']),
-        loadingText: state.getIn(['global', 'loadingText'])
     }
 }
 

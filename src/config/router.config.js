@@ -3,5 +3,6 @@ import Home from './../pages/home';
 
 
 export const routes = [
-    {path: '/home', component: Home},
+    { path: '/', component: Home },
+    { path: '/home', component: Home },
 ]
