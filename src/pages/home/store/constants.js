@@ -2,39 +2,39 @@
 export const GET_TRADE_RECORD = 'tradeRecord/GET_TRADE_RECORD';
 
 export const TRADE_RECORD_COLUMNS = [{
-    title: '订单号(id)',
+    title: '订单号',
     width: 100,
     dataIndex: 'id',
 }, {
-    title: '交易时间(time)',
+    title: '交易时间',
     width: 150,
     dataIndex: 'timeStampStr',
 }, {
-    title: '类型(type)',
+    title: '类型',
     width: 100,
     dataIndex: 'type',
 }, {
-    title: '买入价格(buyPrice)',
+    title: '买入价格',
     width: 100,
     dataIndex: 'buyPrice',
 }, {
-    title: '数量(amount)',
+    title: '数量',
     width: 100,
     dataIndex: 'amount',
 }, {
-    title: '卖出价格(sellPrice)',
+    title: '卖出价格',
     width: 100,
     dataIndex: 'sellPrice',
 }, {
-    title: '手续费(fee)',
+    title: '手续费',
     width: 100,
     dataIndex: 'fee',
 }, {
-    title: '花费(expend)',
+    title: '花费',
     width: 100,
     dataIndex: 'expend',
 }, {
-    title: '收益(profit)',
+    title: '收益',
     dataIndex: 'profit',
     width: '100px',
 }];

@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actionCreators } from '../../store';
-import { Table } from 'antd';
-import { TRADE_RECORD_COLUMNS } from '../../store/constants';
+import { Tabs } from 'antd';
+import TradeTable from '../table/table';
 
+const TabPane = Tabs.TabPane;
 class TradeRecord extends Component {
 
-    componentDidMount () {
-        this.props.getRecordData();
-    }
+    // componentDidMount () {
+    //     this.props.getRecordData();
+    // }
 
     render() {
-        const { recordData } = this.props;
         return (
             <div>
-                <Table 
-                bordered
-                rowKey={record => record.id}
-                columns={TRADE_RECORD_COLUMNS}
-                dataSource={recordData.length > 0 ? recordData[0].recordDataModelList : []}
-                />
+                <Tabs>
+                    <TabPane tab="xrpusdt" key="1">
+                        <TradeTable index={0}/>
+                    </TabPane>
+                    <TabPane tab="btcusdt" key="2">
+                        <TradeTable index={1}/>
+                    </TabPane>
+                    <TabPane tab="htusdt" key="3">
+                        <TradeTable index={2}/>
+                    </TabPane>
+                    <TabPane tab="eosusdt" key="4">
+                        <TradeTable index={3}/>
+                    </TabPane>
+                </Tabs>
             </div>
         );
     }
@@ -27,20 +33,19 @@ class TradeRecord extends Component {
 }
 
 
-const mapStateToProps = (state) => {
-    return {
-        recordData: state.getIn(['tradeRecord', 'recordData']),
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         recordData: state.getIn(['tradeRecord', 'recordData']),
+//     }
+// }
 
-const mapDispathToProps = (dispatch) => {
-    return {
-        getRecordData() {
-            dispatch(actionCreators.getRecordData());
-        },
-    }
+// const mapDispathToProps = (dispatch) => {
+//     return {
+//         getRecordData() {
+//             dispatch(actionCreators.getRecordData());
+//         },
+//     }
+// }
 
-}
-
-export default connect(mapStateToProps, mapDispathToProps)(tradeRecord);
+export default TradeRecord;
 

@@ -28,6 +28,13 @@
     margin-left: 15px;
     color: #ddd;
 }
+
+.content{
+    padding: '0 24px'; 
+    min-height: 280px;
+    background: #fff;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
