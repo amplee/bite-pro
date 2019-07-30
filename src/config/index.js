@@ -1,9 +1,7 @@
 let requestUrl = ''; // apiUrl
-switch (process.env.REACT_APP_SECRET_API) {
+switch (process.env.NODE_ENV) {
     case 'development':
-        requestUrl = 'https://www.easy-mock.com/mock/5cc17b8403f4ee3c8d638510/yxt'; // development mock开发数据
-        // requestUrl = 'http://biztest.bestwehotel.com/corp-openapi/dev'; // development开发数据
-        // /requestUrl = 'http://biztest.bestwehotel.com/corp-openapi'; // test 测试环境
+        requestUrl = ' http://172.25.62.50:7300/mock/5d3ea47b49e43600209ed9e0/bitePro'; // development mock开发数据
         break;
     case 'test':
         requestUrl = 'http://biztest.bestwehotel.com/corp-openapi'; // test 测试环境
@@ -18,5 +16,6 @@ switch (process.env.REACT_APP_SECRET_API) {
         requestUrl = 'http://biztest.bestwehotel.com/corp-openapi/dev'; // development mock开发数据
         break;
 }
+console.log(requestUrl);
 export const urlPrefix = {requestUrl};
 

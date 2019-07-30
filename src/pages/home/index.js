@@ -1,13 +1,20 @@
 import React, {Component} from 'react';
-import {Button} from 'antd';
+import { Tabs} from 'antd';
+import BuyRecord from './components/buyRecord/buyRecord';
+import TradeRecord from './components/tradeRecord/tradeRecord';
 
+const TabPane = Tabs.TabPane;
 class Home extends Component {
     render() {
         return (
-            <div className="App">
-                <Button type="primary">查看买记录</Button>
-                <Button type="primary">查看交易记录</Button>
-            </div>
+            <Tabs type="card">
+                        <TabPane tab="买入记录" key="1">
+                            <BuyRecord/>
+                        </TabPane>
+                        <TabPane tab="交易记录" key="2">
+                            <TradeRecord/>
+                        </TabPane>
+            </Tabs>
         );
     }
 }

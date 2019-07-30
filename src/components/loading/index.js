@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Spin} from 'antd';
-import {actionCreators} from './store';
 import styles from './index.less';
 
 class GlobalLoading extends Component {
-
-    componentWillMount() {
-        this.props.getGlobalUserInfoIntProtocol();
-    }
 
     render() {
         const {loading} = this.props;
@@ -28,12 +23,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispathToProps = (dispatch) => {
-    return {
-        getGlobalUserInfoIntProtocol() {
-            dispatch(actionCreators.getGlobalUserInfoIntProtocol());
-        },
-    }
-}
-
-export default connect(mapStateToProps, mapDispathToProps)(GlobalLoading);
+export default connect(mapStateToProps)(GlobalLoading);
