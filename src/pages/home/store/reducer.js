@@ -6,6 +6,9 @@ const defaultState = fromJS({
 });
 
 
+
+
+
 export default (state = defaultState, action) => {
     console.log('action', action);
     switch (action.type) {
