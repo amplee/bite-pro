@@ -2,8 +2,9 @@ import * as constants from './constants';
 import {fromJS} from 'immutable';
 
 const defaultState = fromJS({
-    recordData: [1,3,4],
+    recordData: [1,3,4, 5 , 6],
 });
+
 
 export default (state = defaultState, action) => {
     console.log('action', action);
