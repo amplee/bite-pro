@@ -5,10 +5,6 @@ const defaultState = fromJS({
     recordData: [1,3,4, 5 , 6],
 });
 
-
-
-
-
 export default (state = defaultState, action) => {
     console.log('action', action);
     switch (action.type) {
