@@ -17,20 +17,6 @@ class TradeRecord extends Component {
             <div>
                 {recordData.length > 0 && 
                 <div>
-                    <Row gutter={16} style={{marginBottom: '20px'}}>
-                        <Col className="gutter-row" span={6}>
-                            <div className="gutter-box">交易类型：{symbol}</div>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            <div className="gutter-box">买入次数：{statisticsModel.buyCount}</div>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            <div className="gutter-box">卖出次数：{statisticsModel.buyCount}</div>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            <div className="gutter-box">卖出次数：{statisticsModel.buyCount}</div>
-                        </Col>
-                    </Row>
                     <Table 
                     bordered
                     rowKey={record => record.id}
