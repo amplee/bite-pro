@@ -5,10 +5,6 @@ import TradeTable from '../table/table';
 const TabPane = Tabs.TabPane;
 class TradeRecord extends Component {
 
-    // componentDidMount () {
-    //     this.props.getRecordData();
-    // }
-
     render() {
         return (
             <div>
@@ -31,21 +27,6 @@ class TradeRecord extends Component {
     }
     
 }
-
-
-// const mapStateToProps = (state) => {
-//     return {
-//         recordData: state.getIn(['tradeRecord', 'recordData']),
-//     }
-// }
-
-// const mapDispathToProps = (dispatch) => {
-//     return {
-//         getRecordData() {
-//             dispatch(actionCreators.getRecordData());
-//         },
-//     }
-// }
 
 export default TradeRecord;
 
