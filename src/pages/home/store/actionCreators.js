@@ -42,7 +42,6 @@ export const getBuyData = () => async (dispatch) => {
         let {data} = await buyData();
         dispatch(changeLoading(false));
         if (data['code'] === 0) {
-            console.log('data.resultMap', data.resultMap)
             dispatch(returnBuyData(data.resultMap));
         } else {
             message.warn(data['message'], 1);
