@@ -1,5 +1,6 @@
 // 获取数据
 export const GET_TRADE_RECORD = 'tradeRecord/GET_TRADE_RECORD';
+export const GET_BUY_RECORD = 'tradeRecord/GET_BUY_RECORD';
 
 export const TRADE_RECORD_COLUMNS = [{
     title: '订单号',
@@ -37,4 +38,30 @@ export const TRADE_RECORD_COLUMNS = [{
     title: '收益',
     dataIndex: 'profit',
     width: '100px',
+}];
+
+export const BUY_RECORD_COLUMNS = [{
+    title: '交易时间',
+    width: 150,
+    dataIndex: 'time',
+}, {
+    title: '价格',
+    width: 100,
+    dataIndex: 'type',
+}, {
+    title: '买入价格',
+    width: 100,
+    dataIndex: 'price',
+}, {
+    title: '预测下次出售价格',
+    width: 100,
+    dataIndex: 'predictNextSell',
+}, {
+    title: '数量',
+    width: 100,
+    dataIndex: 'amount',
+}, {
+    title: '币类型',
+    width: 100,
+    dataIndex: 'symbol',
 }];

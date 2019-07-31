@@ -42,17 +42,21 @@ class App extends Component {
                                     <HashRouter>
                                         <Link to={{ pathname: "/tradeRecord" }}>交易记录</Link>
                                     </HashRouter>
-                                    </Menu.Item>
-                                <Menu.Item key="2">买入记录</Menu.Item>
+                                </Menu.Item>
+                                <Menu.Item key="2">
+                                    <HashRouter>
+                                        <Link to={{ pathname: "/buyRecord" }}>买入记录</Link>
+                                    </HashRouter>
+                                </Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Sider>
-                    <Layout style={{ padding: '0 24px 24px' }}>
-                    <Breadcrumb style={{ margin: '16px 0', 'textAlign': 'left' }}>
+                    <Layout >
+                    {/* <Breadcrumb style={{ margin: '16px 0', 'textAlign': 'left' }}>
                         <Breadcrumb.Item>交易管理</Breadcrumb.Item>
                         <Breadcrumb.Item>交易记录</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <Content className='content'>
+                    </Breadcrumb> */}
+                    <Content className='content' style={{ padding: '20px'}}>
                         <Provider store={store}>
                             <HashRouter>
                                 <div>

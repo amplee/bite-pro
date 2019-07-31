@@ -8,3 +8,10 @@ export function recordData() {
         method: 'POST',
     });
 }
+
+//  获取记录数据
+export function buyData() {
+    return request('/tradeData/buyData', {
+        method: 'POST',
+    });
+}

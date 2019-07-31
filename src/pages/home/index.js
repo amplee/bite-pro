@@ -8,12 +8,12 @@ class Home extends Component {
     render() {
         return (
             <Tabs type="card">
-                        <TabPane tab="买入记录" key="1">
-                            <BuyRecord/>
-                        </TabPane>
-                        <TabPane tab="交易记录" key="2">
-                            <TradeRecord/>
-                        </TabPane>
+                <TabPane tab="买入记录" key="1">
+                    <BuyRecord/>
+                </TabPane>
+                <TabPane tab="交易记录" key="2">
+                    <TradeRecord/>
+                </TabPane>
             </Tabs>
         );
     }

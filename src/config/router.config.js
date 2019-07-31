@@ -1,10 +1,9 @@
 
-import Home from './../pages/home';
 import TradeRecord from './../pages/home/components/tradeRecord/tradeRecord';
-
+import BuyRecord from './../pages/home/components/buyRecord/buyRecord';
 
 export const routes = [
-    { path: '/', component: Home },
+    { path: '/', component: TradeRecord },
     { path: '/tradeRecord', component: TradeRecord },
-    // { path: '/home', component: Home },
+    { path: '/buyRecord', component: BuyRecord },
 ]

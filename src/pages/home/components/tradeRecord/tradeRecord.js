@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
-import TradeTable from '../table/table';
+import TradeTable from '../table/tradeTable';
 
 const TabPane = Tabs.TabPane;
 class TradeRecord extends Component {
@@ -8,7 +8,7 @@ class TradeRecord extends Component {
     render() {
         return (
             <div>
-                <Tabs>
+                <Tabs style={{ textAlign: 'left' }}>
                     <TabPane tab="xrpusdt" key="1">
                         <TradeTable index={0}/>
                     </TabPane>
