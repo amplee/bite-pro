@@ -1,6 +1,6 @@
 
-import TradeRecord from './../pages/home/components/tradeRecord/tradeRecord';
-import BuyRecord from './../pages/home/components/buyRecord/buyRecord';
+import TradeRecord from '../pages/trade/components/tradeRecord/tradeRecord';
+import BuyRecord from '../pages/trade/components/buyRecord/buyRecord';
 
 export const routes = [
     { path: '/', component: TradeRecord },
