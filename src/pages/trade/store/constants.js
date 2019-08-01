@@ -1,6 +1,9 @@
+import React from 'react';
+
 // 获取数据
 export const GET_TRADE_RECORD = 'tradeRecord/GET_TRADE_RECORD';
 export const GET_BUY_RECORD = 'tradeRecord/GET_BUY_RECORD';
+export const GET_PRESENT_PRICE = 'tradeRecord/GET_PRESENT_PRICE';
 
 export const TRADE_RECORD_COLUMNS = [{
     title: '订单号',
@@ -14,6 +17,11 @@ export const TRADE_RECORD_COLUMNS = [{
     title: '类型',
     width: 100,
     dataIndex: 'type',
+    render: (text, record) => (
+        <div>
+        {record.type === 0 ? <span style={{color: 'red'}}>卖出</span> : <span style={{color: 'green'}}>买入</span>}
+        </div>
+    )
 }, {
     title: '买入价格',
     width: 100,

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actionCreators } from '../../store';
-import { Table, Row, Col } from 'antd';
+import { Table } from 'antd';
 import { BUY_RECORD_COLUMNS } from '../../store/constants';
 
 class BuyRecord extends Component {

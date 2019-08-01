@@ -30,20 +30,40 @@ class App extends Component {
                             style={{ height: '100%' }}
                         >
                             <SubMenu
-                            key="sub1"
-                            title={
-                                <span>
-                                    <Icon type="trademark" />
-                                    交易管理
-                                </span>
-                            }
+                                key="sub1"
+                                title={
+                                    <span>
+                                        <Icon type="database" />
+                                        数据管理
+                                    </span>
+                                }
                             >
                                 <Menu.Item key="1">
+                                    <HashRouter>
+                                        <Link to={{ pathname: "/dataChart" }}>数据图</Link>
+                                    </HashRouter>
+                                </Menu.Item>
+                                <Menu.Item key="2">
+                                    <HashRouter>
+                                        <Link to={{ pathname: "/klineChart" }}>K线图</Link>
+                                    </HashRouter>
+                                </Menu.Item>
+                            </SubMenu>
+                            <SubMenu
+                                key="sub2"
+                                title={
+                                    <span>
+                                        <Icon type="trademark" />
+                                        交易管理
+                                    </span>
+                                }
+                            >
+                                <Menu.Item key="tradeRecord">
                                     <HashRouter>
                                         <Link to={{ pathname: "/tradeRecord" }}>交易记录</Link>
                                     </HashRouter>
                                 </Menu.Item>
-                                <Menu.Item key="2">
+                                <Menu.Item key="buyRecord">
                                     <HashRouter>
                                         <Link to={{ pathname: "/buyRecord" }}>买入记录</Link>
                                     </HashRouter>
