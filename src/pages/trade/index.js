@@ -14,6 +14,9 @@ class Home extends Component {
                 <TabPane tab="交易记录" key="2">
                     <TradeRecord/>
                 </TabPane>
+                <TabPane tab="配置中心" key="3">
+                <TradeRecord/>
+            </TabPane>
             </Tabs>
         );
     }
