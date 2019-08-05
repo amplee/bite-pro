@@ -16,15 +16,32 @@ class BuyRecord extends Component {
         const { btcusdt, eosusdt, htusdt, xrpusdt } = buyData;
         return (
             <div>
-                {btcusdt && 
                 <div>
-                    <Table 
+                    <Table
                         bordered
                         rowKey={record => record.id}
                         columns={BUY_RECORD_COLUMNS}
                         dataSource={btcusdt.length > 0 ? btcusdt : []}
                     />
-                </div>}
+                    <Table
+                        bordered
+                        rowKey={record => record.id}
+                        columns={BUY_RECORD_COLUMNS}
+                        dataSource={eosusdt.length > 0 ? eosusdt : []}
+                    />
+                    <Table
+                        bordered
+                        rowKey={record => record.id}
+                        columns={BUY_RECORD_COLUMNS}
+                        dataSource={htusdt.length > 0 ? htusdt : []}
+                    />
+                    <Table
+                        bordered
+                        rowKey={record => record.id}
+                        columns={BUY_RECORD_COLUMNS}
+                        dataSource={xrpusdt.length > 0 ? xrpusdt : []}
+                    />
+                </div>
             </div>
         );
     }
