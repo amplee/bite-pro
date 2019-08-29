@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import ReactEcharts from 'echarts-for-react'
+import ReactEcharts from 'echarts-for-react';
 
 class Home extends Component {
-    getOption =()=> {
+    getOption = ()=> {
         let option = {
             title:{
-              text:'用户骑行订单'
+              text:'买入记录'
             },
             tooltip:{   //展示数据
               trigger:'axis'
@@ -29,8 +29,8 @@ class Home extends Component {
     render() {
         return (
             <ReactEcharts
-                        option={this.getOption}
-                    />
+               option={this.getOption()}
+            />
         );
     }
 }

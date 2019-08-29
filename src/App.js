@@ -40,12 +40,12 @@ class App extends Component {
                             >
                                 <Menu.Item key="1">
                                     <HashRouter>
-                                        <Link to={{ pathname: "/dataChart" }}>数据图</Link>
+                                        <Link to={{ pathname: "/charts" }}>数据图</Link>
                                     </HashRouter>
                                 </Menu.Item>
                                 <Menu.Item key="2">
                                     <HashRouter>
-                                        <Link to={{ pathname: "/klineChart" }}>K线图</Link>
+                                        <Link to={{ pathname: "/charts" }}>K线图</Link>
                                     </HashRouter>
                                 </Menu.Item>
                             </SubMenu>
