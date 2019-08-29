@@ -4,7 +4,6 @@ import { actionCreators } from '../../store';
 import { Table } from 'antd';
 import { BUY_RECORD_COLUMNS } from '../../store/constants';
 
-
 class BuyRecord extends Component {
 
     componentDidMount () {
